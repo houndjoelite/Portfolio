@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO meta -->
+    <meta name="description" content="Portfolio de Houndjo Jean-Jacques – Développeur full-stack spécialisé JavaScript/TypeScript, React et Node.js. Découvrez mes projets, compétences et contactez-moi." />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portfolio – Houndjo Jean-Jacques" />
+    <meta property="og:description" content="Développeur full-stack spécialisé JavaScript/TypeScript, React et Node.js. Découvrez mes réalisations." />
+    <meta property="og:image" content="images/og-cover.jpg" />
+    <meta property="og:url" content="https://houndjojeanjacques.github.io/" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>Mon Portfolio | Développeur Full-Stack</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS animations -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/enhanced.css" />
+</head>
+<body>
+    <header class="header" data-aos="fade-down">
+        <div class="container header__inner">
+            <h1 class="logo">Mon<span>Portfolio</span></h1>
+            <nav class="nav">
+                <a href="#about">À propos</a>
+                <a href="#projects">Projets</a>
+                <a href="#contact">Contact</a>
+                <a href="mailto:houndjojeanjacques82@gmail.com">Email</a>
+                <a href="cv-jeanjacques.pdf" target="_blank" rel="noopener">CV</a>
+                <button id="theme-toggle" aria-label="Changer le thème">
+                    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 3.1A1 1 0 0 1 13 4v2a1 1 0 0 1-2 0V4a1 1 0 0 1 1-1zm0 14a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1zm9-5a1 1 0 0 1-1 1h-2a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1zm-14 0a1 1 0 0 1-1 1H4a1 1 0 1 1 0-2h2a1 1 0 0 1 1 1zm10.95-6.95a1 1 0 0 1 0 1.41l-1.42 1.42a1 1 0 0 1-1.41-1.41l1.42-1.42a1 1 0 0 1 1.41 0zm-9.9 9.9a1 1 0 0 1 0 1.41L6.63 18.9a1 1 0 1 1-1.41-1.41l1.42-1.42a1 1 0 0 1 1.41 0zm0-9.9L6.63 6.63A1 1 0 0 1 5.22 5.2l1.42-1.42a1 1 0 0 1 1.41 1.41zm9.9 9.9l1.42 1.42a1 1 0 0 1-1.41 1.41l-1.42-1.42a1 1 0 1 1 1.41-1.41zM12 6.5A5.5 5.5 0 1 1 6.5 12 5.51 5.51 0 0 1 12 6.5z" />
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" data-aos="fade-up">
+        <div class="container">
+            <h2>Développeur full stack et entrepreneur, j’accompagne les entreprises dans la création de sites web et d’applications sur mesure, performants et évolutifs.</h2>
+            <p class="subtitle">Développeur Full-Stack spécialisé en JavaScript, React & Node.js</p>
+            <a href="#projects" class="btn btn--primary">Voir mes projets</a>
+        </div>
+    </section>
+
+    <!-- Profil -->
+    <section id="profile" class="profile" data-aos="fade-up">
+        <div class="container profile__inner">
+            <div class="profile__photo">
+                <img src="images/profile.jpg" alt="Photo de HOUNDJO Jean Jacques" />
+            </div>
+            <div class="profile__info">
+                <h3>HOUNDJO Jean Jacques</h3>
+                <p>Titulaire d’une Licence en informatique appliquée à la gestion des entreprises.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="about" class="about" data-aos="fade-up">
+        <div class="container">
+            <h3>À propos de moi</h3>
+            <p>
+                Développeur full-stack avec X années d’expérience, je maîtrise JavaScript/TypeScript, React, Node.js et bien plus. Je conçois des applications performantes et maintenables tout en accordant une grande importance à l’expérience utilisateur.
+            </p>
+        </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="skills" class="skills" data-aos="fade-up">
+        <div class="container">
+            <h3>Mes compétences</h3>
+            <div class="skills__grid" id="skills-grid"></div>
+        </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projects" class="projects" data-aos="fade-up">
+        <div class="container">
+            <h3>Projets sélectionnés</h3>
+            <div id="projects-grid" class="projects__grid"></div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact" data-aos="fade-up">
+        <div class="container">
+            <h3>Contactez-moi</h3>
+            <form id="contact-form" action="https://formspree.io/f/yourFormId" method="POST" class="contact__form">
+                <label>
+                    Nom
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Message
+                    <textarea name="message" rows="5" required></textarea>
+                </label>
+                <button type="submit" class="btn btn--primary">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            © <span id="year"></span> HOUNDJO Jean Jacques •
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
